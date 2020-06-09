@@ -10,7 +10,6 @@ import "./Posts.css";
 const Post = props => {
   // set up state for the likes
   const {postInfo} = props
-  console.log(postInfo)
   return (
     <div className="post-border">
       <PostHeader
@@ -26,7 +25,7 @@ const Post = props => {
           src={postInfo.imageUrl}
         />
       </div>
-      <LikeSection />
+      <LikeSection likes={postInfo.likes}/>
       <CommentSection
         postId={postInfo.imageUrl}
         comments={postInfo.comments}
